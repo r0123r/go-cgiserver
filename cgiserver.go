@@ -29,7 +29,7 @@ type CgiHandler struct {
 
 func CgiServer() *CgiHandler {
 	path, _ := filepath.Abs(".")
-	return &CgiHandler{nil, path, "", true, map[string]string{}, 3333, false}
+	return &CgiHandler{nil, path, "", true, map[string]string{}, 3333, false, ""}
 }
 
 func (h *CgiHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
